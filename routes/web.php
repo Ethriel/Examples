@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Http\Controllers\ProjectController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get("/", [ProjectController::class, 'index']);
+// Route::get("/", [ProjectController::class, 'index']);
+Route::get("/", [MainController::class, 'index']);
 
 Route::resource('projects', ProjectController::class);
